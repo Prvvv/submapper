@@ -41,7 +41,6 @@ Currently works and tested on:
 - ***Linux***
 - ***Windows 10/11***
 
-![]({{site.baseurl}}//submapper.PNG)
 
 
 
