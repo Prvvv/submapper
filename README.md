@@ -26,6 +26,8 @@ All while remaining as un-noisy as possible, submapper uses only ***1*** file an
 
 Submapper will also index all currently found subdomains and list them in its own cache to avoid finding the same subdomain twice, giving the best and most reliable results.
 
+![](https://i.ibb.co/59ctRJZ/submapper.png)
+
 ## Installation
 
 Submapper requires ***python3.9+*** with ***pip3 or higher*** installed with the following dependancies:
