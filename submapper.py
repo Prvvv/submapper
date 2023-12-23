@@ -1,4 +1,3 @@
-
 import os
 import webbrowser
 import requests;from requests import get
@@ -26,14 +25,8 @@ print("\n")
 url = input("Domain: ")
 list = []
 
-
-
 def wordlists_brute_force():
-
     try:
-
-
-
         def wordlist_1():
             try:
                 urllist = "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/DNS/subdomains-top1million-110000.txt"
@@ -95,22 +88,12 @@ def wordlists_brute_force():
                                     string = f'''{data['isp']}'''
                                     string = str(string)
 
-                                    print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)
-                                    
-                                    
-                                    
-                                        
-                                    
-                                    
-                                        
-                                              
+                                    print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)                   
                         except:
                             pass
             except:
                 return
-
-
-
+                
         def wordlist_2():
             try:
                 urllist = "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/DNS/shubs-subdomains.txt"
@@ -171,8 +154,7 @@ def wordlists_brute_force():
                                     string = str(string)
 
                                     print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)
-                                    
-                                        
+              
                         except:
                             pass
             except:
@@ -248,8 +230,6 @@ def wordlists_brute_force():
             except:
                 return
 
-
-
         def wordlist_4():
 
             try:
@@ -316,9 +296,7 @@ def wordlists_brute_force():
                             pass
             except:
                 return
-
-
-
+                
         def wordlist_5():
             try:
                 
@@ -367,8 +345,7 @@ def wordlists_brute_force():
                                     string = f'''{data['isp']}'''
                                     string = str(string)
                                     print(url_subdomain,":",ip+Fore.RED+" [404]"+Fore.WHITE)
-
-
+                                    
                             if r.status_code == 301:
                                 
                                 if url_subdomain in list:
@@ -388,10 +365,6 @@ def wordlists_brute_force():
                             pass
             except:
                 return
-
-
-
-
 
         def wordlist_6():
             try:
@@ -454,9 +427,7 @@ def wordlists_brute_force():
                                     string = f'''{data['isp']}'''
                                     string = str(string)
 
-                                    print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)
-                                    
-                                        
+                                    print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)              
                         except:
                             pass
             except:
@@ -477,8 +448,6 @@ def wordlists_brute_force():
         word5.start()
         word6.start()
 
-        #print("Started Wordlists Enumeration...")
-
     except requests.exceptions.ChunkedEncodingError as E:
         pass
 
@@ -486,7 +455,6 @@ def wordlists_brute_force():
 def pure_brute_force(): 
     try:
         
-
         def brute_1():
             while True:
                 try:
@@ -544,10 +512,8 @@ def pure_brute_force():
                                     string = f'''{data['isp']}'''
                                     string = str(string)
 
-                                    print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)
-                                        
+                                    print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)                 
                     except:
-                        #print("TRIED",dom)
                         pass
                 except:
                     return
@@ -598,7 +564,6 @@ def pure_brute_force():
                                     string = str(string)
                                     print(url_subdomain,":",ip+Fore.RED+" [404]"+Fore.WHITE)
 
-
                             if r.status_code == 301:
                                 if url_subdomain in list:
                                     pass
@@ -613,7 +578,6 @@ def pure_brute_force():
                                     print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)
                                     
                     except:
-                        #print("TRIED",dom)
                         pass
                 except:
                     return
@@ -631,7 +595,6 @@ def pure_brute_force():
                     string = string.replace("https://","")
                     string=string.replace("http://","")
                     no_hp_sub = string
-
                     
                     try:
                         r = requests.get(dom)
@@ -676,14 +639,11 @@ def pure_brute_force():
                                     string = f'''{data['isp']}'''
                                     string = str(string)
 
-                                    print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)
-                                    
+                                    print(url_subdomain,":",ip+Fore.BLUE+" [301]"+Fore.WHITE)            
                     except:
                         pass
                 except:
                     return
-            
-
 
         def brute_4():
             while True:
@@ -764,7 +724,6 @@ def pure_brute_force():
                     string = string.replace("https://","")
                     string=string.replace("http://","")
                     no_hp_sub = string
-
                     
                     try:
                         r = requests.get(dom)
@@ -798,8 +757,6 @@ def pure_brute_force():
                                     string = str(string)
                                     print(url_subdomain,":",ip+Fore.RED+" [404]"+Fore.WHITE)
 
-
-
                             if r.status_code == 301:
                                 if url_subdomain in list:
                                     pass
@@ -831,11 +788,6 @@ def pure_brute_force():
         brute3.start()
         brute4.start()
         brutenum.start()
-
-        #print("Started Bruteforce Enumeration...")
-
-       
-
 
     except requests.exceptions.ChunkedEncodingError as E:
         pass
