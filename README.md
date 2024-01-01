@@ -40,7 +40,7 @@ Submapper requires ***python3.9+*** with ***pip3 or higher*** installed with the
 
 Currently works and tested on:
 
-- ***Linux***
+- ***Linux Debian***
 - ***Windows 10/11***
 
 
